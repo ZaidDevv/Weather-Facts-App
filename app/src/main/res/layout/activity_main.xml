@@ -55,8 +55,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:orientation="vertical">
+        android:layout_marginTop="300dp"
+        android:orientation="vertical"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,63 +69,64 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="@color/accent"
-                android:orientation="vertical">
+                android:background="@drawable/shape"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
                 <TextView
                     android:id="@+id/feelsLikeTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/advent_pro_bold"
                     android:text="Feels Like"
+                    android:elevation="10dp"
+                    android:layout_margin="8dp"
                     android:textAlignment="center"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/feelsLikeValueTV"
-                    android:layout_width="wrap_content"
+                    android:layout_width="156dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:padding="40dp"
+                    android:padding="15dp"
                     android:textAlignment="center"
-                    android:textSize="22sp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:outlineAmbientShadowColor="@color/black"
-                android:background="@color/accent"
-                android:orientation="vertical">
+                android:background="@drawable/shape"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
 
 
                 <TextView
                     android:id="@+id/tempratureTV"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/advent_pro_bold"
                     android:text="Temprature"
-                    android:layout_marginTop="5dp"
+                    android:elevation="5dp"
+                    android:layout_margin="8dp"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/tempValueTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="156dp"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:padding="40dp"
+                    android:padding="15dp"
                     android:textAlignment="center"
-                    android:textSize="22sp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
