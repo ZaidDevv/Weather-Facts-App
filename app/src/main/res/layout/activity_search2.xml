@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/searchBT"
+            android:layout_width="48sp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/ic_menu_search"
+            android:backgroundTint="@color/icons"
+            android:layout_weight="1"
+            android:onClick="searchCity" />
+
+        <EditText
+            android:id="@+id/cityET"
+            android:layout_width="286dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="City"
+            android:inputType="textPersonName"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
+

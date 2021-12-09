@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Weather-Facts-Application</string>
+    <string name="app_label">Search </string>
+    <string name="search_hint">City</string>
+    <string name="latestCity"></string>
+    <string name="imgLink"></string>
 </resources>
