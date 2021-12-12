@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:divider="?attr/dividerHorizontal"
     android:orientation="vertical"
-    android:weightSum="6"
     tools:context=".MainActivity">
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:divider="?attr/actionBarDivider"
         android:orientation="horizontal"
         android:weightSum="2">
 
@@ -24,13 +25,13 @@
             android:layout_marginTop="-8dp"
             android:layout_weight="1"
             android:background="@android:drawable/ic_menu_search"
-            android:backgroundTint="@color/icons" />
+            android:backgroundTint="@color/white" />
 
         <TextView
             android:id="@+id/cityName"
             android:layout_width="286dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:fontFamily="@font/advent_pro_bold"
@@ -38,100 +39,293 @@
             android:shadowColor="#3E3E3E"
             android:textSize="48sp"
             android:visibility="visible" />
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/welcomeTV"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_gravity="center_horizontal|top"
+        android:elevation="4dp"
+        android:fontFamily="@font/advent_pro_bold"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:shadowColor="#8E8E8E"
+        android:text="@string/greetings_from"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:divider="?attr/dividerVertical"
+        android:dividerPadding="3dp"
+
         android:orientation="horizontal"
-        android:weightSum="2" />
+        android:showDividers="middle"
+        android:weightSum="2">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:orientation="vertical"
-        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/semiTransparentColor"
+            app:cardCornerRadius="6dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/feelsLikeTV"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/shape"
-                android:orientation="vertical"
-                android:layout_margin="10dp">
-                <TextView
-                    android:id="@+id/feelsLikeTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Feels Like"
-                    android:elevation="10dp"
-                    android:layout_margin="8dp"
-                    android:textAlignment="center"
-                    android:layout_marginTop="5dp"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+                android:layout_gravity="center_horizontal|top"
+                android:layout_margin="8dp"
+                android:layout_marginTop="5dp"
+                android:elevation="10dp"
+                android:fontFamily="@font/advent_pro_bold"
+                android:text="@string/feels_like"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/feelsLikeValueTV"
-                    android:layout_width="156dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="15dp"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/feelsLikeValueTV"
+                android:layout_width="156dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:outlineAmbientShadowColor="@color/black"
-                android:background="@drawable/shape"
-                android:orientation="vertical"
-                android:layout_margin="10dp">
+                android:layout_gravity="center"
+                android:fontFamily="@font/advent_pro_bold"
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/semiTransparentColor"
+            app:cardCornerRadius="6dp">
 
 
-                <TextView
-                    android:id="@+id/tempratureTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:text="Temprature"
-                    android:elevation="5dp"
-                    android:layout_margin="8dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+            <TextView
+                android:id="@+id/tempTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_margin="8dp"
+                android:layout_marginTop="5dp"
+                android:elevation="10dp"
+                android:fontFamily="@font/advent_pro_bold"
+                android:text="@string/temprature"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/tempValueTV"
-                    android:layout_width="156dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:padding="15dp"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
+            <TextView
+                android:id="@+id/tempValueTV"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/advent_pro_bold"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
 
-            </LinearLayout>
-
-        </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:divider="?attr/dividerVertical"
+
+        android:dividerPadding="3dp"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:weightSum="2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/semiTransparentColor"
+            app:cardCornerRadius="6dp">
+
+
+            <TextView
+                android:id="@+id/humidityTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_margin="8dp"
+                android:layout_marginTop="5dp"
+                android:elevation="10dp"
+                android:fontFamily="@font/advent_pro_bold"
+                android:text="@string/humidity"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/humidityValueTV"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/advent_pro_bold"
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/semiTransparentColor"
+            app:cardCornerRadius="6dp">
+
+
+            <TextView
+                android:id="@+id/windTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_margin="8dp"
+                android:layout_marginTop="5dp"
+                android:elevation="10dp"
+                android:fontFamily="@font/advent_pro_bold"
+                android:text="@string/wind"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/windValueTV"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/advent_pro_bold"
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:divider="?attr/dividerVertical"
+
+        android:dividerPadding="3dp"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:weightSum="2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_5"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/semiTransparentColor"
+            app:cardCornerRadius="6dp">
+
+
+            <TextView
+                android:id="@+id/sunriseTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_margin="8dp"
+                android:layout_marginTop="5dp"
+                android:elevation="10dp"
+                android:fontFamily="@font/advent_pro_bold"
+                android:text="@string/sunrise"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sunriseValueTV"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/advent_pro_bold"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_6"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/semiTransparentColor"
+            app:cardCornerRadius="6dp">
+
+
+            <TextView
+                android:id="@+id/sunsetTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_margin="8dp"
+                android:layout_marginTop="5dp"
+                android:elevation="10dp"
+                android:fontFamily="@font/advent_pro_bold"
+                android:text="@string/sunset"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sunsetValueTV"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/advent_pro_bold"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
 </LinearLayout>

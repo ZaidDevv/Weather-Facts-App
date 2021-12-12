@@ -4,4 +4,13 @@
     <string name="search_hint">City</string>
     <string name="latestCity"></string>
     <string name="imgLink"></string>
+    <string name="welcome_message">Greetings from %1$s 👋.</string>
+    <string name="greetings_from">Greetings From</string>
+    <string name="feels_like">Feels Like</string>
+    <string name="temprature">Temprature</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="city">City</string>
 </resources>
