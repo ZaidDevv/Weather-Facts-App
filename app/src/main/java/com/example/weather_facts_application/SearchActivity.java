@@ -61,7 +61,9 @@ public class SearchActivity extends AppCompatActivity {
         else{
             return input;
         }
+
     }
+
     public void searchCity(View view) {
         String userInput = cityET.getText().toString();
 

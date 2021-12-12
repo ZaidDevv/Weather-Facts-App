@@ -33,7 +33,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.time.LocalDateTime;
 import java.util.concurrent.ExecutionException;
 
 import okhttp3.Call;
@@ -56,7 +55,17 @@ public class MainActivity extends AppCompatActivity {
     private TextView cityName,tempValueTV,feelsLikeValueTV;
     private WeatherData weatherData;
     private static String weatherBaseLink = "https://api.openweathermap.org/data/2.5/weather?appid=";
-    private TextView timeTV;
+
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        if(imgLink != null)
+//            setBackgroundImage(imgLink,mainLayout);
+//        if(userQuery != null){
+//            cityName.setText(userQuery.toUpperCase());
+//            callWeatherAPI(userQuery);
+//        }
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
@@ -82,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
         tempValueTV = findViewById(R.id.tempValueTV);
         feelsLikeValueTV = findViewById(R.id.feelsLikeValueTV);
         checkPreferences();
-
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
