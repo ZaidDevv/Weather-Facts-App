@@ -11,15 +11,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.ExecutionException;
 
-public class BackgroundImageHelper extends AsyncTask<URL,Integer, BitmapDrawable> {
+public class BackgroundImageHelper extends AsyncTask<URL,Integer, Bitmap> {
 
     @Override
-    protected BitmapDrawable doInBackground(URL... urls) {
+    protected Bitmap doInBackground(URL... urls) {
         try {
             URL imgUrl = urls[0];
             Bitmap bmp = BitmapFactory.decodeStream(imgUrl.openConnection().getInputStream());
-            BitmapDrawable background = new BitmapDrawable(bmp);
-            return background;
+            return bmp;
         }
         catch (MalformedURLException e) {
             e.printStackTrace();

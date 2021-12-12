@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="6"
     tools:context=".MainActivity">
@@ -23,7 +23,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-8dp"
             android:layout_weight="1"
-            android:elevation="25dp"
             android:background="@android:drawable/ic_menu_search"
             android:backgroundTint="@color/icons" />
 
@@ -43,55 +42,45 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
-        android:gravity="center"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:weightSum="2"/>
+        android:weightSum="2" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:orientation="vertical"
-        >
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
             android:weightSum="2">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/shape"
-                android:orientation="vertical"
-                android:layout_margin="10dp">
+                android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/feelsLikeTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:text="Feels Like"
-                    android:elevation="10dp"
                     android:layout_margin="8dp"
-                    android:textAlignment="center"
                     android:layout_marginTop="5dp"
+                    android:elevation="10dp"
+                    android:text="Feels Like"
+                    android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/feelsLikeValueTV"
                     android:layout_width="156dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:padding="15dp"
                     android:textAlignment="center"
@@ -101,22 +90,22 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:outlineAmbientShadowColor="@color/black"
                 android:background="@drawable/shape"
                 android:orientation="vertical"
-                android:layout_margin="10dp">
+                android:outlineAmbientShadowColor="@color/black">
 
 
                 <TextView
                     android:id="@+id/tempratureTV"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:text="Temprature"
-                    android:elevation="5dp"
                     android:layout_margin="8dp"
+                    android:elevation="5dp"
+                    android:text="Temprature"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="20sp" />

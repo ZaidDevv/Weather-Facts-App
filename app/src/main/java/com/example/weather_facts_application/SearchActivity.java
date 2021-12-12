@@ -38,7 +38,6 @@ public class SearchActivity extends AppCompatActivity {
     private String imgUrl;
 
     private String baseUrl = "https://api.unsplash.com/search/photos?per_page=1&orientation=portrait&page=1&query=";
-    private String q;
     public static final String querySaved="QKEY";
     public static final String imgSaved="IMGSAVED";
     @Override
@@ -49,7 +48,7 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
-    private boolean validateInput(String input){
+    private String validateInput(String input){
         if(input.isEmpty()){
             Context context = getApplicationContext();
             CharSequence text = "Please Enter a city!";
@@ -57,17 +56,17 @@ public class SearchActivity extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
-            return false;
+            return "";
         }
         else{
-            return true;
+            return input;
         }
     }
     public void searchCity(View view) {
         String userInput = cityET.getText().toString();
-        boolean valid = validateInput(userInput);
-        if(valid){
-            callImageApi(userInput);
+
+        if(!validateInput(userInput).isEmpty()){
+            callImageApi(userInput.trim().replace(" ", "+"));
         }
     }
 
@@ -75,7 +74,7 @@ public class SearchActivity extends AppCompatActivity {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .addHeader("Authorization","Client-ID " + getString(R.string.unsplash_key))
-                .url(baseUrl+query.trim())
+                .url(baseUrl+query)
                 .build();
 
         client.newCall(request).enqueue(new Callback() {
@@ -96,7 +95,6 @@ public class SearchActivity extends AppCompatActivity {
                             Intent i = new Intent();
                             i.putExtra("imgUrl",imgUrl);
                             i.putExtra("query",query);
-                            q = query;
                             setResult(Activity.RESULT_OK, i);
                             finish();
                         } catch (JSONException e) {
