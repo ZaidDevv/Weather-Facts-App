@@ -1,4 +1,4 @@
-# Weather-Facts-App
+# Android Weather App
 
 Grabs the latest weather forecast details based on the users' input.
 The input can be a city or a country.
