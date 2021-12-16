@@ -1,6 +1,17 @@
 package com.example.weather_facts_application.models;
 
-public class WeatherData {
+import android.content.res.Resources;
+
+import com.example.weather_facts_application.R;
+
+import org.apache.commons.lang3.text.WordUtils;
+
+import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class WeatherData implements Serializable {
     private final double temp;
     private final double feels_like;
     private final double humidity;
@@ -47,4 +58,5 @@ public class WeatherData {
     public double getHumidity() {
         return humidity;
     }
+
 }

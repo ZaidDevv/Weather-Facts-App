@@ -5,7 +5,6 @@
     <string name="latestCity"></string>
     <string name="imgLink"></string>
     <string name="welcome_message">Greetings from %1$s 👋.</string>
-    <string name="greetings_from">Greetings From</string>
     <string name="feels_like">Feels Like</string>
     <string name="temprature">Temprature</string>
     <string name="humidity">Humidity</string>
